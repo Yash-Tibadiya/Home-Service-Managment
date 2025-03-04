@@ -8,6 +8,9 @@ export interface IUser extends Document {
   fullName: string;
   password: string;
   refreshToken: string;
+  contact: string;
+  address: string;
+  serviceHistory: mongoose.Types.ObjectId[];
   isPasswordCorrect(password: string): Promise<boolean>;
   generateAccessToken(): string;
   generateRefreshToken(): string;
@@ -43,6 +46,22 @@ const userSchema = new Schema<IUser>(
     refreshToken: {
       type: String,
     },
+    contact: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    address: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    serviceHistory: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Service",
+      },
+    ],
   },
   {
     timestamps: true,
