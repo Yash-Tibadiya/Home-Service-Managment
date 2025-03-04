@@ -8,7 +8,6 @@ export interface IUser extends Document {
   fullName: string;
   password: string;
   refreshToken: string;
-  contact
   isPasswordCorrect(password: string): Promise<boolean>;
   generateAccessToken(): string;
   generateRefreshToken(): string;
