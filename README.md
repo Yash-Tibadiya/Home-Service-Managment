@@ -3,6 +3,8 @@
 
 A Node.js/Express-based service management system, with MongoDB as the database, to manage users, service providers, and services. This system allows users to request services from providers, rate services, and manage service histories.
 
+![Model](https://github.com/Yash-Tibadiya/Home-Service-Managment/blob/main/public/temp/Screenshot%202025-03-05%20120213.png?raw=true)
+
 ## Features
 
 - **User Authentication:** Users can sign up, log in, and authenticate with JWT tokens.
